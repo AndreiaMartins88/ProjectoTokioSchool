@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='registo.css') }}">
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <nav>
+        <a href="http://127.0.0.1:5000/" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da pagina -->
+        <!-- Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="http://127.0.0.1:5000"><li>Homepage</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosGold"><li>Gold</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosSilver"><li>Silver</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+        </ul>
+        </nav>
+    </header>
+ <!-- Parte principal do Corpo da página, é onde está o formulário de registo do cliente e que tem de ser totalmente
+ preenchido para puder ser gravado e entrar na base de dados-->
+ <main>
+     <div class="boxregisto">
+            <form action="{{url_for('registo')}}" method="post" name="formRegisto">
+                <fieldset>
+                    <legend><b>Registo</b></legend>
+                    <br>
+                    <table>
+                        <tr>
+                            <p><h3>{{mensagem}}</h3></p>
+                            <br>
+                            <td class="right"><h3>Insira os seus dados pessoais</h3></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nome:</label></td>
+                            <td class="left"><input type="text" name="nomeUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label> Apelido:</label></td>
+                            <td class="left"><input type="text" name="apelidoUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>E-mail:</label></td>
+                            <td class="left"><input id="mail" type="email" name="emailUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label> Password:</label></td>
+                            <td class="left"><input type="password" name="passwordUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label> Confirmação da Password:</label></td>
+                            <td class="left"><input type="password" name="confirmacaoPasswordUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Contacto:</label></td>
+                            <td class="left"><input type="tel" name="contactoUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Data de Nascimento:</label></td>
+                            <td class="left"><input type="date" name="nascimentoUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Sexo:</h4></td>
+                            <td>
+                                <select name="sexoUtilizador">
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                </select>
+                            </td>
+                        <tr>
+                            <td class="right"><h4>Dados Carta de Condução</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nº Carta de Condução:</label></td>
+                            <td class="left"><input type="number" name="numeroCartaConducao" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Data de Emissão:</label></td>
+                            <td class="left"><input type="date" name="emissaoCartaConducao" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Válido até:</label></td>
+                            <td class="left"><input type="date" name="validadeCartaConducao" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Dados Cartão de Cidadão</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nº Cartão de Cidadão:</label></td>
+                            <td class="left"><input type="number" name="numeroCartaoCidadao" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nº de Contribuinte:</label></td>
+                            <td class="left"><input type="number" name="numeroContribuinte" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Válido até:</label></td>
+                            <td class="left"><input type="date" name="validadeCartaoCidadao" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Dados Cartão de Crédito:</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nº do Cartão de Crédito:</label></td>
+                            <td class="left"><input type="number" name="numeroCartaoCredito" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Mês e Ano:</label></td>
+                            <td class="left"><input type="month" name="validadeCartaoCredito" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Morada de Faturação:</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Morada:</label></td>
+                            <td class="left"><input type="text" name="moradaUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Cidade:</label></td>
+                            <td class="left"><input type="text" name="cidadeUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Código Postal:</label></td>
+                            <td class="left"><input type="text" name="codigoPostalUtilizador" onkeyup="manage(this)" /></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Escolha a sua categoria:</h4></td>
+                            <td class="left">
+                                <select name="categoria">
+                                    <option value="Gold">Gold</option>
+                                    <option value="Silver">Silver</option>
+                                    <option value="Eco">Económico</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Categoria Gold:</label></td>
+                            <td class="left"><p><b>600€/Dia</b></p></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Categoria Silver:</label></td>
+                            <td class="left"><p><b>250€/Dia</b></p></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Categoria Económico:</label></td>
+                            <td class="left"><p><b>50€/Dia</b></p></td>
+                        </tr>
+                    </table>
+                </fieldset>
+                <br>
+                <table>
+                    <tr>
+                        <td><input type="submit" id="botaoRegisto" name="novoRegisto" value="Registar" disabled></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+    <!--Rodapé da página, esta parte é comum a todas as páginas-->
+ <footer>
+        <h3>Contacta-nos</h3>
+        <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+        <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+        <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+        <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+    </footer>
+</body>
+<!--Este trecho de código em JavaScript tem de estar aqui para impossibilitar que o formulário seja submetido vazio,
+sempre que se carregar no botão para gravar o registo, os campos tem de estar todos preenchidos-->
+<script>
+    function manage(txt) {
+        var bt = document.getElementById('botaoRegisto');
+        var ele = document.getElementsByTagName('input');
+
+        // Loop through each element.
+        for (i = 0; i < ele.length; i++) {
+
+            // Check the element type.
+            if (ele[i].value == '') {
+                bt.disabled = true;    // Disable the button.
+                return false;
+            }
+            else {
+                bt.disabled = false;   // Enable the button.
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='reserva.css') }}">
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+         <nav>
+        <a href="http://127.0.0.1:5000" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da pagina -->
+        <!-- Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="http://127.0.0.1:5000"><li>Homepage</li></a>
+            <a class="nav-item" href="{{url_for('minhaPagina')}}"><li>Minha Página</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosGold"><li>Gold</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosSilver"><li>Silver</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+        </ul>
+        </nav>
+    </header>
+    <!--Parte principal do corpo da página, aqui é mostrado ao cliente o veiculo que ele reservou e todos os dados
+    correspondentes à reserva do cliente, se tudo estiver correcto o cliente poderá prosseguir para o pagamento e
+    finalizar toda a reserva-->
+    <main>
+        <div class="boxreserva">
+            <fieldset>
+                <legend><b>A sua Reserva</b></legend>
+                 <table>
+                    <tr>
+                        <h4>Dados da sua Reserva:</h4><br>
+                    </tr>
+                     <p>{{mensagem}}</p>
+                    <tr>
+                        <td class="right"><label><b>Categoria do veículo:</b></label></td>
+                        <td class="left"><output name="categoria"><b>{{categoria_veiculo}}</b></output></td>
+                    </tr>
+                     <tr>
+                        <td class="right"><label><b>Preço dia:</b></label></td>
+                        <td class="left"><output name="preco"><b>{{preco_diario}} €</b></output></td>
+                    </tr>
+                     <tr>
+                        <td class="right"><label><b>Marca:</b></label></td>
+                        <td class="left"><output name="marca"><b>{{marca_veiculo}}</b></output></td>
+                     </tr>
+                     <tr>
+                        <td class="right"><label><b>Modelo:</b></label></td>
+                        <td class="left"><output name="modelo"><b>{{modelo_veiculo}}</b></output></td>
+                    </tr><tr>
+                        <td class="right"><label><b>Valor Total:</b></label></td>
+                        <td class="left"><output name="total"><b>{{valor_Total}} €</b></output></td>
+                    </tr>
+                     <tr>
+                        <td class="right"><label><b>Morada de levantamento:</b></label></td>
+                        <td class="left"><label>Rua da Alegria nº21 3030-138</label></td>
+                      </tr>
+                 </table>
+                 <form action="{{url_for('reserva')}}" method="post">
+                    <table>
+                     <tr>
+                        <td class="right"><label><b>Data de levantamento:</b></label></td>
+                        <td class="left"><input type="date" name="DataLevantamento" value="{{data_levantamento}}"></td>
+                     </tr>
+                     <tr>
+                        <td class="right"><label><b>Data de entrega:</b></label>
+                        <td class="left"><input type="date" name="DataEntrega" value="{{data_entrega}}"></td>
+                        <td><input type="submit" id="botaoReservar" name="botao" value="Calcular €"></td>
+                     </tr>
+                    </table>
+                     <br>
+                     <table>
+                         <tr>
+                         <p>A partir desta data {{data_reserva}} poderá efetuar a sua reserva </p>
+                     </tr>
+                     </table>
+                    <br>
+                    <input type="checkbox" value="checkbox" name="checkbox" >&nbsp;Declara que aceita os nossos <a id="termosCondicoes" href="./static/TermoseCondicoesLuxuryWeels.pdf"><i><b>Termos Condições</b></i></a>
+                <br>
+                 <table>
+                     <tr>
+                         <td><input type="submit" id="botaoReservar" name="botao" value="Ir para pagamento"></td>
+                     </tr>
+                 </table>
+            </form>
+                </fieldset>
+        </div>
+    </main>
+    <!--Rodapé da página, esta parte é comum a todas as páginas-->
+    <footer>
+        <h3>Contacta-nos</h3>
+        <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+        <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+        <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+        <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LuxuryWheels</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+
+
+</head>
+<body>
+    <!--Cabeçalho da página principal, que visualizamos logo quando a abrimos a página-->
+    <header>
+        <nav>
+        <a href="http://127.0.0.1:5000/" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da página principal o (&reg) que se
+        encontra imediatamente a seguir ao nome da empresa é para aparecer como marca registada-->
+
+        <!-- Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="{{url_for('logout')}}"><li>{{logout}}</li></a>
+            <a class="nav-item" href="{{url_for('minhaPagina')}}"><li>{{minha_pagina}}</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/login"><li>Login</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/registo"><li>Registo</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosGold"><li>Gold</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosSilver"><li>Silver</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+        </ul>
+        </nav>
+    </header>
+
+    <!--Corpo Principal da Página-->
+    <main>
+       <!-- Aqui Seccionei o Corpo Principal da Página, dividindo a zona da imagem e a do texto de apresentação dos
+       serviços prestados pela empresa-->
+        <section id="hero">
+            <section id="introducao">
+                <h2>Conduza o seu Sonho sobre rodas com a Luxury Wheels&reg</h2>
+                <h3>Quer alugue um carro para uma viagem de luxo, para experimentar um topo de gama ou até mesmo para o dia do seu casamento, com a Luxury Whells irá sempre impressionar, independentemente da ocasião.
+                </h3>
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="http://127.0.0.1:5000/carros" class="btn btn-primary" id="botaoCarros"><h3>Carros</h3></a>
+                            </td>
+                            <td>
+                                <a href="http://127.0.0.1:5000/motas" class="btn btn-primary" id="botaoMotas"><h3>Motas</h3></a>
+                            </td>
+                        </tr>
+                    </table>
+            </section>
+            <aside id="carro">
+                <img
+                    src="./static/maserati.jpg"
+                    alt="Foto de um maseratti"
+                />
+                <h4>Temos as viaturas mais exclusívas do mercado</h4>
+            </aside>
+        </section>
+    </main>
+    <!--Rodapé da página, esta parte é comum a todas as páginas-->
+    <footer>
+        <h3>Contacta-nos</h3>
+        <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+        <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+        <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+        <!--Como pretendia ter aqui o exemplo de um link para as "redes sociais da empresa" este icon vai encaminhar
+        o utilizador para a página da tokioschool, mas num senário real seria para as redes sociais da empresa-->
+        <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veiculos Gold</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='veiculosGold.css') }}">
+</head>
+<body>
+   <!--Cabeçalho-->
+    <header>
+         <nav>
+        <a href="http://127.0.0.1:5000" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da pagina -->
+        <!-- Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="http://127.0.0.1:5000"><li>Homepage</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/login"><li>Login</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/login"><li>Registo</li></a>
+            <a class="nav-item" href="{{url_for('minhaPagina')}}"><li>Minha Página</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosSilver"><li>Silver</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+        </ul>
+        </nav>
+    </header>
+<!--Parte principal do corpo do site, aqui aparecem todos os veículos da categoria Gold carros e motas-->
+<main>
+    <div class="boxGold">
+        <fieldset>
+        <legend><b>A nossa selecção GOLD</b></legend>
+        <table class="center">
+            <tr>
+                <th class="titulo">Austin Martin DBS</th>
+                <th class="titulo">Maseratti Ghibli S Q4 Zegna Edition</th>
+                <th class="titulo">Lamborghini Huracan</th>
+                <th class="titulo">Rolls Royce Black Badge</th>
+                <th class="titulo">Ferrari Portofino</th>
+            </tr>
+            <tr>
+                <td>
+                    <img class="imagem" src="./static/austinmartinDBS.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/maseratiGhibliSQ4.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/lamborghini.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/RollsRoyceBlackBadge.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/FerrariPortofino.png" alt="Foto de um carro"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="paragraph" >Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>Mudanças automáticas</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp; Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>Mudanças automáticas</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Cinco Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>Mudanças sequênciais</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>Mudanças automáticas</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Cinco Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>Mudanças sequênciais</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="c1"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="c2"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="c3"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="c4"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="c5"><h3>Reservar</h3></button></form>
+                </td>
+            </tr>
+        </table>
+            <br><br>
+         <table class="center">
+            <tr>
+                <th class="titulo">Ducati Superleggera V4</th>
+                <th class="titulo">MV Agusta F4 RR</th>
+                <th class="titulo">BMW K 1600 GTL</th>
+                <th class="titulo">Honda GL 1800 Gold Wing Bagger</th>
+                <th class="titulo">Harley Davidson CVO Breakout</th>
+            </tr>
+            <tr>
+                <td>
+                    <img class="imagem"  src="./static/superleggera.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/f4mvagusta.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/bmwk1600gtl.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/hondaGoldwing.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/harleycvo.png" alt="Foto de uma mota"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="paragraph" >Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>998 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Um Lugar</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>998 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>1.649 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>1.833 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Gold: 600,00€ ao dia</p><br>
+                    <p><b>1.450 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="m1"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="m2"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="m3"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="m4"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosGold')}}" method="post"><button type="submit" class="botaogold" name="reservarGold" value="m5"><h3>Reservar</h3></button></form>
+                </td>
+            </tr>
+        </table>
+        </fieldset>
+     </div>
+</main>
+ <!--Rodapé da página esta parte é comum a todas as páginas-->
+<footer>
+    <h3>Contacta-nos</h3>
+    <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+    <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+    <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+    <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+</footer>
+</body>
+</html>

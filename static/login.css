@@ -1,0 +1,112 @@
+*{
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin:0
+}
+
+header{
+    padding: 2rem;
+    box-shadow:0 5px 10px #003262 ; /*traço decorativo por baixo do cabeçalho da pagina */
+    position: sticky;/*Cabeçalho fica fixo aparece sempre mesmo que se faça scroll na pagina e tem fundo branco */
+    top:0;
+    left:0;
+    background-color: #fff;
+}
+
+button{
+    cursor: pointer;
+
+}
+
+/* separação dos elementos do cabeçalho*/
+nav {display: flex;
+     justify-content:space-between;
+}
+
+/* alinhamento dos elementos do cabeçalho*/
+nav ul {
+    display: flex;
+    list-style:none;
+}
+/* separação dos links e letra a bold do cabeçalho*/
+nav ul a {
+    margin-left: 2rem;
+    font-weight: bold;
+}
+/* cor principal dos elementos do cabeçalho*/
+.nav-item {
+    color: #003262;
+    text-decoration: none;
+}
+/* Cor mais clara para sinalizar que existe link para clicar na pagina*/
+.nav-item:hover {
+     color:#5D8AA8
+}
+
+/*----------Main----------*/
+
+/*altura minima defenida para altura disponivel da pagina a 100%*/
+main {
+    padding: 7rem;
+    min-height: 100dvh;
+}
+fieldset {
+    border:3px solid dodgerblue;
+    border-radius:25px;
+}
+td{
+    space: 10px;
+}
+legend {
+    border: 1px solid dodgerblue;
+    padding: 10px;
+    background-color: dodgerblue;
+    border-radius: 7px;
+}
+.boxlogin{ /*Posicionar a caixa do formulário login*/
+    display: inline-flex ;
+    padding-right: 7rem;
+    margin-left: 40rem;
+    margin-top: 7rem;
+    color:white;
+    background-color: rgba(0,0,0,0.8);
+    padding:15px;
+    border-radius:25px;
+    width:auto;
+}
+#botaoLogin{
+    padding: 0.4rem 1rem;
+    display:flex;
+    justify-content: center;
+    border:3px solid dodgerblue;
+    border-radius:10px;
+    background-color:dodgerblue;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+#botaoLogin:hover{ background-color:#003262}
+
+
+/*Defenições do rodapé, cor de fundo texto cor de letra espaçamento...*/
+footer {
+    background-color:#003262;
+    padding: 1rem;
+    color: #fff;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow:0 -5px 10px #003262 ;
+}
+/*Alterar o icon da camara para branco e sem traço*/
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    background: #667db6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

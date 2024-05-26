@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagamento</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='pagamento.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+   <!--Cabeçalho da pagina-->
+   <header>
+         <nav>
+        <a href="http://127.0.0.1:5000" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da página -->
+        <!-- Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="http://127.0.0.1:5000"><li>Homepage</li></a>
+            <a class="nav-item" href="{{url_for('minhaPagina')}}"><li>Minha Página</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosGold"><li>Gold</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosSilver"><li>Silver</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+        </ul>
+        </nav>
+    </header>
+   <!--Parte principal do corpo da página onde está o formulário para o utilizador proceder ao pagamento da reserva-->
+    <main>
+        <div class="boxpagamento">
+        <form action="{{url_for('pagamento')}}" method="post">
+            <fieldset>
+                <legend><b>Pagamento</b></legend>
+                <p>Para concluir a sua reserva introduza os dados do seu cartão de crédito abaixo para efetuar o pagamento.</p><br>
+                <table>
+                    <tr>
+                        <h4>Dados do Cartão de Crédito:</h4>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td class="right"><label>Nº Cartão de Crédito:</label><br></td>
+                        <td class="left"><input name="clienteCartaoCredito" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td class="right"><label>Mês e Ano:</label><br>
+                        <td class="left"><input name="mesCartaoCredito" type="month">
+                    </tr>
+                     <tr>
+                        <td class="right"><label>CVV:</label></td><br>
+                        <td class="left"><input name="cvv" type="number">
+                    <tr>
+                        <td class="right"><label>Titular do Cartão:</label></td><br>
+                        <td class="left"><input name="titularCartaoCredito" type="text">
+                    </tr>
+                 </table>
+                <br><br>
+                <p>* Relembramos que o atraso na devolução da viatura implica o pagamento adicional de mais um dia</p>
+            </fieldset>
+            <br>
+            <div align="center">
+                     <!--<a id="botaofinalizar" data-target="#myModal" role="button" class="btn btn-warning" data-toggle="modal"><span class="glyphicon glyphicon-hand-up"></span>Finalizar Reserva</a>-->
+                <input type="submit" id="botaofinalizar" name="botao" value="Finalizar Reserva" data-target="#myModal" data-toggle="modal">
+            </div>
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <span class="close" data-dismiss="modal">&times;</span>
+                        <p>Receberá já em seguida um email com as informações da sua reserva!</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <input type="checkbox" value="checkbox" name="checkbox"> Ao finalizar esta reserva, está a concordar com as condições de reserva e entende a informação acerca da utilização dos seus dados pessoais, explicados na <a id="PoliticaPrivacidade" href="./static/PoliticadePrivacidadeLuxuryWeels.pdf"><i><b>Política de Privacidade</b></i></a>
+        </form>
+        </div>
+    </main>
+   <footer>
+       <!--Rodapé da página, esta parte é comum a todas as páginas-->
+       <h3>Contacta-nos</h3>
+       <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+       <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+       <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+       <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+    </footer>
+</body>
+</html>

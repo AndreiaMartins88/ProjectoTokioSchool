@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veiculos Silver</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='veiculosSilver.css') }}">
+</head>
+<body>
+<!--Cabeçalho-->
+    <header>
+         <nav>
+        <a href="http://127.0.0.1:5000" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da página -->
+        <!--Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="http://127.0.0.1:5000"><li>Homepage</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/login"><li>Login</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/login"><li>Registo</li></a>
+            <a class="nav-item" href="{{url_for('minhaPagina')}}"><li>Minha Página</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosGold"><li>Gold</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+        </ul>
+        </nav>
+    </header>
+<!--Parte principal do corpo do site, aqui aparecem todos os veículos da categoria Silver carros e motas-->
+<main>
+  <div class="boxSilver">
+        <fieldset>
+        <legend><b>A nossa selecção SILVER</b></legend>
+            <table class="center">
+            <tr>
+                <th class="titulo">Mercedes AMG GT C Roadster</th>
+                <th class="titulo">BMW Serie 7</th>
+                <th class="titulo">Audi R8</th>
+                <th class="titulo">Nissan GTR</th>
+                <th class="titulo">Porsche Carrera 911</th>
+            </tr>
+            <tr>
+                <td>
+                    <img class="imagem" src="./static/MercedesAmgGTcRoadster.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/BMWserie7.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/r8.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/nissanGTR.png" alt="Foto de um carro"/>
+                </td>
+                <td>
+                    <img class="imagem" src="./static/porscheCarrera911.png" alt="Foto de um carro"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="paragraph">Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>Mudanças automáticas</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>Mudanças automáticas</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Cinco Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>Mudanças sequênciais</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>Mudanças sequênciais</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Quatro Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph">Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>Mudanças automáticas</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Quatro Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="c6"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="c7"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="c8"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="c9"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="c10"><h3>Reservar</h3></button></form>
+                </td>
+            </tr>
+        </table>
+            <br><br>
+     <table class="center">
+            <tr>
+                <th class="titulo">Ducati PaniGale 1199 R</th>
+                <th class="titulo">MV Agusta Rush 1000</th>
+                <th class="titulo">BMW R 1250 RT</th>
+                <th class="titulo">BMW R 1200 GS Adventure</th>
+                <th class="titulo">Ducati Multistrada 1200 S Pikes Peak</th>
+            </tr>
+            <tr>
+                <td>
+                    <img class="imagem"  src="./static/panigale.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/rushMVagusta.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/bmwrt.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/bmwgs.png" alt="Foto de uma mota"/>
+                </td>
+                <td>
+                    <img class="imagem"  src="./static/ducatimultistrada.png" alt="Foto de uma mota"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="paragraph" >Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>1.198 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Um Lugar</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>998 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>1.254 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>1.254 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+                <td>
+                    <p class="paragraph" >Categoria Silver: 250,00€ ao dia</p><br>
+                    <p><b>1.198 cc de Cilindrada</b></p>
+                    <p><i class="tiny material-icons">person</i>&nbsp;Dois Lugares</p>
+                    <p><i class="tiny material-icons"> local_gas_station</i>&nbsp;Gasolina</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="m6"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="m7"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="m8"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="m9"><h3>Reservar</h3></button></form>
+                </td>
+                <td>
+                    <form action="{{ url_for('veiculosSilver')}}" method="post"><button type="submit" class="botaosilver" name="reservarSilver" value="m10"><h3>Reservar</h3></button></form>
+                </td>
+            </tr>
+        </table>
+        </fieldset>
+  </div>
+</main>
+<!--Rodapé da página esta parte é comum a todas as páginas-->
+<footer>
+    <h3>Contacta-nos</h3>
+    <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+    <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+    <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+    <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+</footer>
+</body>
+</html>

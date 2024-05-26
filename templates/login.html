@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <!--Cabeçalho da pagina login-->
+    <header>
+        <nav>
+        <a href="http://127.0.0.1:5000/" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da página -->
+        <!-- Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="http://127.0.0.1:5000"><li>Homepage</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosGold"><li>Gold</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosSilver"><li>Silver</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+        </ul>
+        </nav>
+    </header>
+    <!-- corpo principal onde está o formulario para o utilizador fazer o login  -->
+    <main>
+        <div class="boxlogin">
+        <form action="{{url_for('login')}}" method="post" name="login">
+            <fieldset>
+                <legend><b>Login</b></legend>
+                <div class="inputBox">
+                    <table>
+                        <p>{{mensagem}}</p>
+                        <tr>
+                            <td align="right"><label>E-mail:</label></td>
+                            <td align="left"><input placeholder="a@email.com" name="userEmail" type="email" onkeyup="manage(this)"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label> Password:</label></td>
+                            <td align="left"> <input placeholder="*******" name="userPassword" type="password" onkeyup="manage(this)"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </fieldset>
+            <br>
+            <table>
+                    <tr>
+                        <td><input type="submit" id="botaoLogin" name="login" value="Login" disabled/></td>
+                    </tr>
+            </table>
+        </form>
+        </div>
+    </main>
+    <!--Rodapé da página, esta parte é comum a todas as páginas-->
+    <footer>
+        <h3>Contacta-nos</h3>
+        <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+        <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+        <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+        <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+    </footer>
+</body>
+<!--Este trecho de código em JavaScript tem de estar aqui para impossibilitar que o formulário seja submetido vazio,
+sempre que se carregar no botão para inicar o login, os campos tem de estar todos preenchidos-->
+<script>
+    function manage(txt) {
+        var bt = document.getElementById('botaoLogin');
+        var ele = document.getElementsByTagName('input');
+
+        // Loop through each element.
+        for (i = 0; i < ele.length; i++) {
+
+            // Check the element type.
+            if (ele[i].value == '') {
+                bt.disabled = true;    // Disable the button.
+                return false;
+            }
+            else {
+                bt.disabled = false;   // Enable the button.
+            }
+        }
+    }
+</script>
+</html>

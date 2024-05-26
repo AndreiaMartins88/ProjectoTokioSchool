@@ -1,0 +1,56 @@
+Proposta C - Desenvolvimento do site e da app
+
+  Iniciei a execução deste trabalho ainda estava em vigor o das três propostas, decidi escolher a 3º proposta como forma
+ de testar as competencias adquiridas ao longo do curso, e também como desafio.
+  Antes de iniciar este projecto tive fazer, dois projectos de menor dimensão, um que foi com html(pagina de web) e o
+ outro projecto foi uma pequena aplicação com recurso ao tkinter.
+  Após a execução desses dois mini projectos, comecei a estruturar como seria o site e posteriormente a aplicação.
+  Para desenvolver o site, optei por aprender o basico de html e fiz alguns testes e explorei a linguagem até chegar ao
+ produto final que apresento aqui.
+   No caso da aplicação iniciei e explorei também o tkinter numa fase inicial, e comecei a explorar outras bibliotecas
+ que me premitissem fazer aplicações, deparei-me com o PyQt6 e comecei a explorar também, reparei também que é uma
+ ferramenta que as empresas pedem muito e com vista a trabalhar nesta área no futuro, optei por explorar o QT e fazer a
+ aplicação com recurso a esta biblioteca especifica ao invés do Tkinter, confesso também que gostei mais de
+ trabalhar com PyQT, o facto de ter acesso ao QT Designer, ajuda bastante na visualização do posicionamento dos
+ elementos, assim como ajuda a controlar o resultado visual final e não só.
+
+ Como no enunciado foi deixado um pouco ao critério do estudante decidir como desenvolver o trabalho e era um pouco mais
+genérico do que o actual enunciado creio que haverá aqui algumas diferenças, como por exemplo no método de pagamento que
+ é esperado actualmente haver mais do que um tipo de pagamento, no entanto e como era pedido que o cliente pudesse fazer
+ o renting da viatura desde o inicio ao fim através do site eu reduzi o método de pagamento ao cartao de crédito, uma
+ vez que o pagamento com dinheiro físico não seria possível. Outra situação que me levou a optar por esta situação foi o
+  facto de estar-mos a falar de uma marca de renting de veículos de Luxo, em que os valores são acima dos valores
+  praticados por uma empresa que faça o renting de viaturas de média e baixa gama. No meu caso, e por se tratar de uma
+  empresas de veiculos de luxo até as viaturas que se encontram na categoria económica são de marcas associadas a alta
+  gama. De alguma forma quis que houvesse coesão entre o tipo de viaturas e o que seria expectável uma empresa de luxo
+  apresentar aos seus clientes.
+
+  O site é o ficheiro app.py e dentro da pasta templates, encontram-se as diferentes páginas de html, a pasta recursos
+  contem as fotos e os documentos que foram necessários para o site. A pasta database, contém as bases de dados e estas
+  são partilhadas entre o site e a aplicação.
+  A aplicação abre através do ficheiro mainAPP.py, sendo o ficheiro paginaPrincipal.py o principal da aplicação e os
+  ficheiros pagManutenção.py, pagLegalizacao.py e pagGestaoStock.py secundários, e que só podem ser acedidos a partir da
+  paginaPrincipal.py a partir dos botões que se encontram localizados no cabeçalho. Como era pedido que houvesse a
+  sinalização de alertas nestas 3 situações optei por dar um duplo uso aos botões, que servem primáriamente para aceder
+  a outras páginas, e também servem para de alerta ao utilizador, de que ha veículos a necessitar de manutenção,
+  legalização e que o stock necessita de ser aumentado. Caso nenhum dos alertas seja acionado o texto dos botões
+  apresentar-se-á a branco caso contrário passa a azul.
+
+  O site foi feito de forma a ser automático como é por exemplo o caso das reservas, que após o veículo ser entregue só
+   poderá ser novamente requesitado após x dias (para limpeza e ou pequenas reparações) no entanto na aplicação esse
+   número de dias pode ser excluído pois o administrador poderá colocar a viatura novamente disponível o que faz com que
+   esta apareça disponível novamente no site para alugar.
+
+  As imagens das viaturas aparecem sempre no site mesmo que elas estejam indisponiveis no momento em que o cliente
+  deseje a viatura, a razão é mais uma vez por se tratar de um renting direcionado para o mercado de luxo, é expectável
+  que o cliente queira uma determinada viatura, e retirá-la do site não daria a informação ao cliente de que essa
+  viatura existe para alugar, terá no entanto é de esperar que ela fique novamente disponível.
+  Aparecem no site 15 carros e 15 motas, no entanto a empresa tem 60 veículos, isto porque, a gama mais alta tem apenas
+  um veículo de cada, a gama intermédia tem 2 viaturas de cada modelo apresentado na fotografia e a gama económica tem 3
+  viaturas de cada modelo.
+
+  Por fim o site foca-se mais na experiência do utilizador / cliente, ao contratrio da aplicação, esta foca-se mais no
+  controlo e gestão da frota dos veículos.
+
+
+

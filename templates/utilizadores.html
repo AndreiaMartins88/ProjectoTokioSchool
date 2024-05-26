@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Utilizadores</title>
+     <!-- Icons materializecss.com -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Folha de estilo (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='utilizadores.css') }}">
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+         <nav>
+        <a href="http://127.0.0.1:5000" id="logo" class="nav-item"
+        ><h1>Luxury Wheels&reg</h1></a> <!--Título que aparece no cabeçalho da página -->
+        <!-- Links de ligação às outras páginas do site-->
+        <ul>
+            <a class="nav-item" href="http://127.0.0.1:5000"><li>Homepage</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/carros"><li>Carros</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/motas"><li>Motas</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosGold"><li>Gold</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosSilver"><li>Silver</li></a>
+            <a class="nav-item" href="http://127.0.0.1:5000/veiculosEconomicos"><li>Económicos</li></a>
+            <a class="nav-item" href="{{url_for('logout')}}"><li>Logout</li></a>
+        </ul>
+        </nav>
+    </header>
+    <!--Parte principal do corpo da página estão aqui todos os dados do utilizador e na sua área pessoal, também
+    poderá proceder à alteração dos seus dados clicando no botão de actualizar dados sendo desta forma direcionado
+    para a pagina actualizarclientes-->
+    <main>
+        <div class="boxutilizadores">
+            <fieldset>
+                <legend><b>Os seus dados Pessois</b></legend>
+                    <table>
+                        <tr>
+                            <td class="right"><label>Nome:</label></td>
+                            <td class="left"><b>{{cliente_nome}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label> Apelido:</label></td>
+                            <td class="left"><b>{{cliente_apelido}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>E-mail:</label></td>
+                            <td class="left"><b>{{cliente_email}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Contacto:</label></td>
+                            <td class="left"><b>{{cliente_contacto}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Data de Nascimento:</label></td>
+                            <td class="left"><b>{{cliente_nascimento}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Morada de faturação:</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Morada:</label></td>
+                            <td class="left"><b>{{cliente_morada}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Cidade:</label></td>
+                            <td class="left"><b>{{cliente_cidade}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Código Postal:</label></td>
+                            <td class="left"><b>{{cliente_codigoPostal}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Dados Carta de Condução</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nº Carta de Condução:</label></td>
+                            <td class="left"><b>{{cliente_cartaConducao}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Data de Emissão:</label></td>
+                            <td class="left"><b>{{cliente_cartaConducaoEmissao}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Válido até:</label></td>
+                            <td class="left"><b>{{cliente_cartacConducaoValidade}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>Dados do seu Cartão de Cidadão</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nº Cartão de Cidadão:</label></td>
+                            <td class="left"><b>{{cliente_numeroCidadao}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Nº de Contribuinte:</label></td>
+                            <td class="left"><b>{{cliente_numeroContribuinte}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label>Válido até:</label></td>
+                            <td class="left"><b>{{cliente_cartaoCidadaoValidade}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>A sua categoria é:</h4></td>
+                            <td class="left"><b>{{cliente_categoria}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><h4>A sua última reserva foi:</h4></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label><b>Marca:</b></label><br>
+                            <td class="left"><b>{{cliente_veiculoMarca}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label><b>Modelo:</b></label><br>
+                            <td class="left"><b>{{cliente_veiculoModelo}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label><b>Preço dia:</b></label><br>
+                            <td class="left"><b>{{cliente_veiculoPrecoDia}}</b></td>
+                        </tr>
+                        <tr>
+                            <td class="right"><label><b>Data de levantamento:</b></label><br></td>
+                            <td class="left"><b>{{cliente_veiculoLevantamento}}</b></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <td class="right"><p><b>De acordo com a categoria escolhida,</b></p>
+                                <p><b>temos para si esta selecção de veículos:</b></p></td>
+                            <td class="left"><form action="{{ url_for('utilizadores')}}" method="post"><button type="submit" class="botaoSugestao" name="Sugestao" value="Sugestao" ><h3>A nossa Sugestão</h3></button></form></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <td class="left"><a class="actualizar" href="http://127.0.0.1:5000/actualizarclientes"><li>Para atualizar os seus dados Click Aqui</li></a></td>
+                        </tr>
+                    </table>
+                    <br>
+                     <table>
+                        <tr>
+                            <td class="left"><a class="visualizar" href="http://127.0.0.1:5000/reservaUtilizador"><li>Para visualizar a sua reserva Click Aqui</li></a></td>
+                        </tr>
+                    </table>
+                </fieldset>
+        </div>
+    </main>
+    <!--Rodapé da página actualizar clientes esta parte é comum a todas as págvisualizarinas-->
+    <footer>
+        <h3>Contacta-nos</h3>
+        <p><i class="material-icons">location_on</i>&nbsp;Morada: Rua da Alegria nº21 3030-138</p>
+        <p><i class="material-icons">mail</i>&nbsp;E-mail: luxurywheels@rentcar.pt</p>
+        <p><i class="material-icons">phone</i>&nbsp;Telemóvel: 934 111 000</p>
+        <a href="https://tokioschool.pt/"><i class="material-icons">camera_alt</i></a>
+    </footer>
+</body>
+</html>

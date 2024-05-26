@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1102</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	border:none;
+	background-color:transparent;
+	background: transparent;
+	padding:0;
+	margin:0;
+	color:#fff;
+}
+#centralwidget, #bodyContent, #kmLineEdit,#matriculaLineEdit, #submeterBtn,#kmLineEdit_2,#matriculaLineEdit_2, #submeterBtn_2,#kmLineEdit_3,#matriculaLineEdit_3,#submeterBtn_3{
+	background-color: #1f2329;
+}
+#header,#mainBody,#frotaCarrosBtn,#frotaMotasBtn, #entregaVeiculo, #manutencaoVeiculo,#legalizacaoVeiculo{
+	background-color:#27263c;
+}
+QPushButton{
+	text-align:left;
+	padding:3px 5px;
+}
+#frotaCarrosBtn,#frotaMotasBtn, #submeterBtn,#submeterBtn_2,#submeterBtn_3{
+	border-radius: 12px;
+	border: 2px solid #0080FF;
+}
+#tableWidget_2{
+	margin-left: 55px;
+}
+
+</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item alignment="Qt::AlignTop">
+     <widget class="QWidget" name="header" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item alignment="Qt::AlignLeft">
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="marcaLabel">
+            <property name="font">
+             <font>
+              <family>Tahoma</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Luxury Wheels</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignRight">
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="manutencaoHeaderBtn">
+            <property name="font">
+             <font>
+              <family>Tahoma</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Manutenção</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="legalizacaoHeaderBtn">
+            <property name="font">
+             <font>
+              <family>Tahoma</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Legalização</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="stockHeaderBtn">
+            <property name="font">
+             <font>
+              <family>Tahoma</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Gestão Stock</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/icon/icons/original_svg/book-open.svg</normaloff>:/icon/icons/original_svg/book-open.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>27</width>
+              <height>27</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainBody" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="leftMenu" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>10</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="frame_3">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="resumoBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Resumo Mensal</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>21</width>
+                    <height>21</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="frotaBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>A Minha Frota</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>21</width>
+                    <height>21</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame_4">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QPushButton" name="rentingBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Renting</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>21</width>
+                    <height>21</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="manutencaoBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Manutenção</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>21</width>
+                    <height>21</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="legalizacaoBtn">
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Legalização</string>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>21</width>
+                    <height>21</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="bodyContent" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="pagResumo">
+             <widget class="QWidget" name="gridLayoutWidget">
+              <property name="geometry">
+               <rect>
+                <x>-1</x>
+                <y>-1</y>
+                <width>881</width>
+                <height>481</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout"/>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="pagFrota">
+             <widget class="QFrame" name="frame_5">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>10</y>
+                <width>881</width>
+                <height>421</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QTableWidget" name="tabelaFrota">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>8</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color:#55aaff
+</string>
+                 </property>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>88</number>
+                 </attribute>
+                 <attribute name="verticalHeaderDefaultSectionSize">
+                  <number>30</number>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>Id Veiculo</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Categoria</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Marca</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Modelo</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Disponivel</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Matrícula</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Km</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Última Revisão</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Legalização €</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Preço Dia</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QFrame" name="frame_6">
+              <property name="geometry">
+               <rect>
+                <x>673</x>
+                <y>430</y>
+                <width>191</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QPushButton" name="frotaCarrosBtn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">text-align: center;
+</string>
+                 </property>
+                 <property name="text">
+                  <string>Carros</string>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QPushButton" name="frotaMotasBtn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>70</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">text-align:center;</string>
+                 </property>
+                 <property name="text">
+                  <string>Motas</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="pagRenting">
+             <widget class="QFrame" name="frame_7">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>851</width>
+                <height>371</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QTableWidget" name="tableWidget">
+               <property name="geometry">
+                <rect>
+                 <x>60</x>
+                 <y>0</y>
+                 <width>871</width>
+                 <height>371</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color:#000;
+</string>
+               </property>
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>124</number>
+               </attribute>
+               <column>
+                <property name="text">
+                 <string>Id Veiculo</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Categoria</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Marca</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Modelo</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Matricula</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Data Devolução</string>
+                </property>
+               </column>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="entregaVeiculo" native="true">
+              <property name="geometry">
+               <rect>
+                <x>-5</x>
+                <y>440</y>
+                <width>891</width>
+                <height>48</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <property name="spacing">
+                <number>21</number>
+               </property>
+               <property name="leftMargin">
+                <number>10</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>10</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="tituloLabel">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>11</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Devolução da viatura</string>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <property name="indent">
+                  <number>-1</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="matriculaLineEdit">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Matricula</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="kmLineEdit">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Km</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submeterBtn">
+                 <property name="minimumSize">
+                  <size>
+                   <width>85</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">text-align:center</string>
+                 </property>
+                 <property name="text">
+                  <string>Submeter</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="pagManutencao">
+             <widget class="QWidget" name="manutencaoVeiculo" native="true">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>440</y>
+                <width>891</width>
+                <height>48</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <property name="spacing">
+                <number>21</number>
+               </property>
+               <property name="leftMargin">
+                <number>10</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>10</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="tituloLabel_2">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>11</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Fim de Manutenção</string>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <property name="indent">
+                  <number>-1</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="matriculaLineEdit_2">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Matricula</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="kmLineEdit_2">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Km</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submeterBtn_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>85</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">text-align:center</string>
+                 </property>
+                 <property name="text">
+                  <string>Submeter</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QFrame" name="frame_8">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>10</y>
+                <width>881</width>
+                <height>381</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_7">
+               <item>
+                <widget class="QTableWidget" name="tableWidget_2">
+                 <property name="styleSheet">
+                  <string notr="true">color:#0080FF;</string>
+                 </property>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>123</number>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>Id Veiculo</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Categoria</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Marca</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Modelo</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Matricula</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Fim Manutenção</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="pagLegalizacao">
+             <widget class="QWidget" name="legalizacaoVeiculo" native="true">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>440</y>
+                <width>881</width>
+                <height>48</height>
+               </rect>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <property name="spacing">
+                <number>21</number>
+               </property>
+               <property name="leftMargin">
+                <number>10</number>
+               </property>
+               <property name="topMargin">
+                <number>10</number>
+               </property>
+               <property name="rightMargin">
+                <number>10</number>
+               </property>
+               <property name="bottomMargin">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="tituloLabel_3">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>11</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Legalização da Viatura</string>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>false</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="margin">
+                  <number>0</number>
+                 </property>
+                 <property name="indent">
+                  <number>-1</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="matriculaLineEdit_3">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Matricula</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="kmLineEdit_3">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Km</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDateEdit" name="dataLegalizacao">
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="dateTime">
+                  <datetime>
+                   <hour>0</hour>
+                   <minute>0</minute>
+                   <second>0</second>
+                   <year>2024</year>
+                   <month>1</month>
+                   <day>1</day>
+                  </datetime>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="submeterBtn_3">
+                 <property name="minimumSize">
+                  <size>
+                   <width>85</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Tahoma</family>
+                   <pointsize>10</pointsize>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">text-align:center</string>
+                 </property>
+                 <property name="text">
+                  <string>Submeter</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QFrame" name="frame_9">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>10</y>
+                <width>881</width>
+                <height>401</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <widget class="QTableWidget" name="tableWidget_3">
+                 <property name="styleSheet">
+                  <string notr="true">color:#000;</string>
+                 </property>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>107</number>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>Id Veiculo</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Categoria</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Marca</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Modelo</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Matricula</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Km</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Última Legalização</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Preço Legalização</string>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
